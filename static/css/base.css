@@ -14,3 +14,96 @@ body {
     color: rgb(4, 59, 4);
     font-weight: bold;
 }
+
+main {
+    min-height: calc(100vh - 128px);
+}
+
+
+
+footer {
+    background-color: rgb(206, 139, 52);
+    color: rgb(4, 48, 4);
+    padding: 12px 0 6px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer p {
+    margin-bottom: 3px;
+}
+
+.img {
+    max-width: 800px;
+    height: auto;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.home h1 {
+    text-align: center;
+    color: rgb(20, 65, 97);
+}
+
+.home p {
+    margin-top: 10px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1;
+    color: blue;
+}
+
+.home {
+    text-align: center;
+}
+
+.list .record {
+    border: 1px solid #dadde1;
+    background-color: white;
+    margin:20px;
+    padding: 12px;
+}
+.list .record h5 {
+    color: rgb(12, 57, 91);
+}
+
+
+
+
+.wrapper img {
+
+    width: 200px;
+
+}
+
+.center-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width:767px) {
+    .home .wrapper {
+        display: block;
+    }
+
+    .home p {
+        max-width: unset;
+        text-align: justify;
+        color: red;
+    }
+}
