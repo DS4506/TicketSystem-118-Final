@@ -9,7 +9,7 @@
 </div>
     {% for record in posts%}
     <div class="record">
-        <h5>{{record.title}}</h5>
+        <h5><a href="{% url 'detail' record.id %}">{{record.title}}</a></h5>
         <P>{{record.content}}</P>
     </div>
 

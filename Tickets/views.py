@@ -1,7 +1,8 @@
+from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, DetailView
 from .models import Post
 from .forms import CreateForm
 from django.urls import reverse
@@ -36,6 +37,16 @@ class ListPosts(ListView):
     
     def get_queryset(self):
         return Post.objects.all()
+    
+    
+class PostDetail(DetailView):
+    model = Post
+    template_name = "Tickets/detail.html"
+    context_object_name = 'post'
+    
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset
 
 
     
